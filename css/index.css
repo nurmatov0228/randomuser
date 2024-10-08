@@ -1,0 +1,241 @@
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: #ffffff;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+.users__cards {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 900;
+  top: 0;
+  right: 0;
+  color: grey;
+  cursor: pointer;
+}
+
+.sun {
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+}
+
+.user {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 3rem;
+}
+
+.user__item {
+  width: 25%;
+  height: 300px;
+  position: relative;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0px 5px 10px 2px var(--shadow-color);
+  background-color: #f2f2f2;
+  /* color: white; */
+}
+
+.user__delete--btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border: 0;
+  background: transparent;
+  font-size: 2.5rem;
+  display: none;
+  transition: 0.3s;
+  outline: none;
+}
+
+.user__delete--btn:hover {
+  color: red !important;
+  transform: rotate(15deg);
+}
+
+.user__item:hover .user__delete--btn {
+  display: block;
+}
+
+.user__img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.user div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.user div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.user div span:last-child {
+  margin-left: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.dark-mode {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(130deg, rgb(0, 0, 0) 0%, rgb(72, 6, 100) 50%, rgb(46, 6, 246) 100%);
+}
+
+li {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 350px;
+}
+
+.search {
+  border-radius: 7px;
+  background-color: rgb(0, 255, 0);
+  color: #000;
+  border: none;
+  width: 100px;
+  text-align: center;
+}
+.search:hover {
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgb(123, 255, 123);
+}
+
+.sun {
+  color: #605d5d;
+}
+
+.navbar-brand {
+  color: #605d5d;
+}
+
+.darkMode {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(150deg, rgb(0, 0, 0) 0%, rgb(35, 42, 71) 0%);
+}
+.darkMode li {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(150deg, rgb(0, 0, 0) 0%, rgb(68, 80, 126) 0%);
+  color: #fff;
+}
+.darkMode li .icon {
+  color: #fff;
+}
+.darkMode .sun {
+  color: yellow;
+}
+.darkMode .search {
+  color: #ffffff;
+}
+.darkMode .search:hover {
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgb(46, 162, 46);
+}
+.darkMode .loader {
+  background-color: #fff;
+  color: #ff3d00;
+}
+.darkMode .navbar-brand {
+  color: yellow;
+}
+.darkMode nav {
+  background-color: #605d5d;
+}/*# sourceMappingURL=index.css.map */
